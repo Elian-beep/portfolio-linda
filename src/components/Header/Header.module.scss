@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: none; /* Hidden on mobile */
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: #666;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+/* Mobile Hamburger Button */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100; /* Above mobile menu */
+  
+  @media (min-width: 768px) {
+    display: none; /* Hidden on tablet and desktop */
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  /* When menu is open, transform hamburger to X */
+  &.open .line:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  &.open .line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  &.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+/* Mobile Menu Sidebar */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hidden off-screen by default */
+  width: 250px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 99;
+  padding-top: 5rem; /* Space for closing button */
+  display: flex;
+  flex-direction: column;
+
+  &.open {
+    right: 0;
+  }
+
+  @media (min-width: 768px) {
+    display: none; /* Unused on larger screens */
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #666;
+    }
+  }
+}
