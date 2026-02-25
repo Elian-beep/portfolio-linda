@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
+import logoDesktop from "../../assets/logo-desktop.svg";
+import logoMobile from "../../assets/logo-mobile.svg";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +11,12 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>Linda.UX</div>
+      <Link to="/" className={styles.logoContainer}>
+        <picture>
+          <source media="(min-width: 768px)" srcSet={logoDesktop} />
+          <img src={logoMobile} alt="Linda.UX Logo" />
+        </picture>
+      </Link>
 
       {/* Desktop Navigation */}
       <nav className={styles.desktopNav}>
