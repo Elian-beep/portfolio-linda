@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
@@ -12,10 +13,10 @@ export const Header = () => {
 
       {/* Desktop Navigation */}
       <nav className={styles.desktopNav}>
-        <a href="#home">Sobre mim</a>
-        <a href="#about">Projetos</a>
-        <a href="#services">Diferencial e interesse</a>
-        <a href="#contact">Currículo PDF</a>
+        <Link to="/">Sobre mim</Link>
+        <Link to="/projects">Projetos</Link>
+        <Link to="/services">Diferencial e interesse</Link>
+        <Link to="/resume">Currículo PDF</Link>
       </nav>
 
       {/* Mobile Hamburger Button */}
@@ -32,18 +33,18 @@ export const Header = () => {
       {/* Mobile Menu Sidebar */}
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
         <nav className={styles.mobileNav}>
-          <a href="#home" onClick={toggleMenu}>
-            Home
-          </a>
-          <a href="#about" onClick={toggleMenu}>
-            About
-          </a>
-          <a href="#services" onClick={toggleMenu}>
-            Services
-          </a>
-          <a href="#contact" onClick={toggleMenu}>
-            Contact
-          </a>
+          <Link to="/" onClick={toggleMenu}>
+            Sobre mim
+          </Link>
+          <Link to="/projects" onClick={toggleMenu}>
+            Projetos
+          </Link>
+          <Link to="/services" onClick={toggleMenu}>
+            Diferencial e interesse
+          </Link>
+          <Link to="/resume" onClick={toggleMenu}>
+            Currículo PDF
+          </Link>
         </nav>
       </div>
     </header>
