@@ -1,7 +1,9 @@
+import { Header } from "./components/Header/Header";
+
 function App() {
   return (
     <>
-      <p className="read-the-docs">Portfolio Hill</p>
+      <Header />
     </>
   );
 }

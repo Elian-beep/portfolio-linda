@@ -12,10 +12,10 @@ export const Header = () => {
 
       {/* Desktop Navigation */}
       <nav className={styles.desktopNav}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">Sobre mim</a>
+        <a href="#about">Projetos</a>
+        <a href="#services">Diferencial e interesse</a>
+        <a href="#contact">Currículo PDF</a>
       </nav>
 
       {/* Mobile Hamburger Button */}
@@ -24,9 +24,9 @@ export const Header = () => {
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
-        <span className={styles.line}></span>
-        <span className={styles.line}></span>
-        <span className={styles.line}></span>
+        {Array.from({ length: 9 }).map((_, i) => (
+          <span key={i} className={styles.dot}></span>
+        ))}
       </button>
 
       {/* Mobile Menu Sidebar */}

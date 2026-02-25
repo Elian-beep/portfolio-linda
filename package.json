@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \"typed-scss-modules \\\"src/**/*.scss\\\" --watch\"",
+    "dev": "vite",
     "build": "typed-scss-modules \"src/**/*.scss\" && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
