@@ -1,11 +1,19 @@
-import { Outlet } from "react-router-dom";
 import { Header } from "./components/Header/Header";
+import { Home } from "./pages/Home";
+import { Projects } from "./pages/Projects";
+import { Services } from "./pages/Services";
+import { Resume } from "./pages/Resume";
 
 function App() {
   return (
     <>
       <Header />
-      <Outlet />
+      <main>
+        <Home />
+        <Projects />
+        <Services />
+        <Resume />
+      </main>
     </>
   );
 }

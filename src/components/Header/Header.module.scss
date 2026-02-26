@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@import "@/styles/colors";
 
 .header {
   display: flex;
@@ -16,18 +16,18 @@
   text-decoration: none;
 
   img {
-    height: 25px; /* Mobile height */
+    height: 25px;
     width: auto;
 
     @media (min-width: 768px) {
-      height: 40px; /* Desktop height */
+      height: 40px;
     }
   }
 }
 
 /* Desktop Navigation */
 .desktopNav {
-  display: none; /* Hidden on mobile */
+  display: none;
   gap: 2rem;
 
   a {
@@ -58,11 +58,11 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 100; /* Above mobile menu */
-  position: relative; /* for absolute positioning of X lines */
+  z-index: 100;
+  position: relative;
   
   @media (min-width: 768px) {
-    display: none; /* Hidden on tablet and desktop */
+    display: none;
   }
 
   .dot {
@@ -73,7 +73,6 @@
     transition: all 0.3s ease;
   }
 
-  /* Prepare X lines for open state */
   &::before, &::after {
     content: '';
     position: absolute;
@@ -89,7 +88,6 @@
     transform: scale(0);
   }
 
-  /* When menu is open, transform dots to X */
   &.open .dot {
     transform: scale(0);
     opacity: 0;
@@ -104,18 +102,17 @@
   }
 }
 
-/* Mobile Menu Sidebar */
 .mobileMenu {
   position: fixed;
   top: 0;
-  right: -100%; /* Hidden off-screen by default */
+  right: -100%;
   width: 250px;
   height: 100vh;
   background-color: #ffffff;
   box-shadow: -2px 0 5px rgba(0,0,0,0.1);
   transition: right 0.3s ease-in-out;
   z-index: 99;
-  padding-top: 5rem; /* Space for closing button */
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
 
@@ -124,7 +121,7 @@
   }
 
   @media (min-width: 768px) {
-    display: none; /* Unused on larger screens */
+    display: none;
   }
 }
 

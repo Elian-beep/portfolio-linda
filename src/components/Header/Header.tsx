@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 import logoDesktop from "../../assets/logo-desktop.svg";
 import logoMobile from "../../assets/logo-mobile.svg";
@@ -9,21 +8,45 @@ export const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className={styles.header}>
-      <Link to="/" className={styles.logoContainer}>
+      <a
+        href="#home"
+        onClick={(e) => scrollToSection(e, "home")}
+        className={styles.logoContainer}
+      >
         <picture>
           <source media="(min-width: 768px)" srcSet={logoDesktop} />
           <img src={logoMobile} alt="Linda.UX Logo" />
         </picture>
-      </Link>
+      </a>
 
       {/* Desktop Navigation */}
       <nav className={styles.desktopNav}>
-        <Link to="/">Sobre mim</Link>
-        <Link to="/projects">Projetos</Link>
-        <Link to="/services">Diferencial e interesse</Link>
-        <Link to="/resume">Currículo PDF</Link>
+        <a href="#home" onClick={(e) => scrollToSection(e, "home")}>
+          Sobre mim
+        </a>
+        <a href="#projects" onClick={(e) => scrollToSection(e, "projects")}>
+          Projetos
+        </a>
+        <a href="#services" onClick={(e) => scrollToSection(e, "services")}>
+          Diferencial e interesse
+        </a>
+        <a href="#resume" onClick={(e) => scrollToSection(e, "resume")}>
+          Currículo PDF
+        </a>
       </nav>
 
       {/* Mobile Hamburger Button */}
@@ -40,18 +63,18 @@ export const Header = () => {
       {/* Mobile Menu Sidebar */}
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
         <nav className={styles.mobileNav}>
-          <Link to="/" onClick={toggleMenu}>
+          <a href="#home" onClick={(e) => scrollToSection(e, "home")}>
             Sobre mim
-          </Link>
-          <Link to="/projects" onClick={toggleMenu}>
+          </a>
+          <a href="#projects" onClick={(e) => scrollToSection(e, "projects")}>
             Projetos
-          </Link>
-          <Link to="/services" onClick={toggleMenu}>
+          </a>
+          <a href="#services" onClick={(e) => scrollToSection(e, "services")}>
             Diferencial e interesse
-          </Link>
-          <Link to="/resume" onClick={toggleMenu}>
+          </a>
+          <a href="#resume" onClick={(e) => scrollToSection(e, "resume")}>
             Currículo PDF
-          </Link>
+          </a>
         </nav>
       </div>
     </header>
