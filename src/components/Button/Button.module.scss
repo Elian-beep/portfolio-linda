@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+
+.button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.primary {
+  color: $color-neutral-100;
+  background: $color-pink-400;
+}
+
+.secondary {
+  color: $color-pink-400;
+  border: 1px solid $color-pink-400 !important;
+}

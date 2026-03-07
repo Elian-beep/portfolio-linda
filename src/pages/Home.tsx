@@ -1,3 +1,4 @@
+import { PrimaryButton, SecondaryButton } from "@/components/Button";
 import styles from "./Home.module.scss";
 import lindaImage from "@/assets/linda-logo-01.png";
 
@@ -21,8 +22,18 @@ export const Home = () => {
         </p>
 
         <div className={styles.buttonArea}>
-          <button>Ver projetos →</button>
-          <button>Ver currículo PDF →</button>
+          <PrimaryButton
+            action={() =>
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Ver projetos →
+          </PrimaryButton>
+          <SecondaryButton action={() => window.open("#", "_blank")}>
+            Ver currículo PDF →
+          </SecondaryButton>
         </div>
       </div>
     </section>
