@@ -4,36 +4,38 @@ import lindaImage from "@/assets/linda-logo-01.png";
 
 export const Home = () => {
   return (
-    <section id="home" className={styles.home}>
-      <div className={styles.imageArea}>
-        <img
-          src={lindaImage}
-          alt="Linda Souza"
-          className={styles.responsiveImage}
-        />
-      </div>
+    <section id="home" className={styles.homeSection}>
+      <div className={styles.homeContent}>
+        <div className={styles.imageArea}>
+          <img
+            src={lindaImage}
+            alt="Linda Souza"
+            className={styles.responsiveImage}
+          />
+        </div>
 
-      <div className={styles.descArea}>
-        <h1>Oi, eu sou a Linda Souza!</h1>
+        <div className={styles.descArea}>
+          <h1>Oi, eu sou a Linda Souza!</h1>
 
-        <p>
-          Product Designer apaixonada por tornar experiências digitais mais
-          acessíveis, simples e funcionais
-        </p>
+          <p>
+            Product Designer apaixonada por tornar experiências digitais mais
+            acessíveis, simples e funcionais
+          </p>
 
-        <div className={styles.buttonArea}>
-          <PrimaryButton
-            action={() =>
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Ver projetos →
-          </PrimaryButton>
-          <SecondaryButton action={() => window.open("#", "_blank")}>
-            Ver currículo PDF →
-          </SecondaryButton>
+          <div className={styles.buttonArea}>
+            <PrimaryButton
+              action={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Ver projetos →
+            </PrimaryButton>
+            <SecondaryButton action={() => window.open("#", "_blank")}>
+              Ver currículo PDF →
+            </SecondaryButton>
+          </div>
         </div>
       </div>
     </section>
