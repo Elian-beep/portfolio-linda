@@ -4,7 +4,7 @@ import plantIcon from "@/assets/psychiatry_icon.svg";
 
 export const Differentials = () => {
   return (
-    <section className={styles.differentialsSection}>
+    <section id="differentials" className={styles.differentialsSection}>
       <div className={styles.differentialsContent}>
         <div className={styles.cardLeft}>
           <div className={styles.iconWrapper}>

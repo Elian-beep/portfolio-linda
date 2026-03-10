@@ -41,7 +41,7 @@ export const Header = () => {
         <a href="#projects" onClick={(e) => scrollToSection(e, "projects")}>
           Projetos
         </a>
-        <a href="#services" onClick={(e) => scrollToSection(e, "services")}>
+        <a href="#differentials" onClick={(e) => scrollToSection(e, "differentials")}>
           Diferencial e interesse
         </a>
         <a href="#resume" onClick={(e) => scrollToSection(e, "resume")}>
