@@ -1,9 +1,9 @@
 import { Header } from "./components/Header/Header";
 import { Home } from "./pages/Home";
 import { Projects } from "./pages/Projects";
-import { Services } from "./pages/Services";
 import { Resume } from "./pages/Resume";
 import { About } from "./pages/About";
+import { Differentials } from "./pages/Differentials";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Home />
         <About />
         <Projects />
-        <Services />
+        <Differentials />
         <Resume />
       </main>
     </>
