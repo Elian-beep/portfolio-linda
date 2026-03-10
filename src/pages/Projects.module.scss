@@ -1,0 +1,60 @@
+@import "../styles/colors";
+
+.projectsSection {
+  width: 100%;
+  padding: 4rem 24px;
+}
+
+.projectsContent{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid $color-neutral-300;
+  background-color: transparent;
+  color: $color-neutral-600;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $color-pink-400;
+    color: $color-pink-400;
+  }
+
+  &.active {
+    background-color: $color-pink-400;
+    border-color: $color-pink-400;
+    color: $color-neutral-100;
+  }
+}
