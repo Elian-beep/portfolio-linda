@@ -1,0 +1,106 @@
+@import "../styles/colors";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-neutral-100;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid $color-neutral-200;
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    border-color: $color-pink-400;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 70%;
+  background-color: $color-green-100;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.imagePlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-green-100;
+}
+
+.tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: $color-pink-200;
+  color: $color-neutral-800;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.125rem;
+    color: $color-neutral-800;
+    line-height: 1.4;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    color: $color-neutral-600;
+    line-height: 1.6;
+    flex: 1;
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+    }
+  }
+
+  .link {
+    color: $color-pink-400;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-pink-600;
+    }
+
+    span {
+      font-size: 1rem;
+      line-height: 1;
+    }
+  }
+}
