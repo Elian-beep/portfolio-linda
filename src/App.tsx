@@ -4,6 +4,7 @@ import { Projects } from "./pages/Projects";
 import { About } from "./pages/About";
 import { Differentials } from "./pages/Differentials";
 import { Contact } from "./pages/Contact";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Differentials />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
