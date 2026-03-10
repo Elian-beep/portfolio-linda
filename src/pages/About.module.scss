@@ -72,8 +72,48 @@
       font-size: 1.25rem;
     }
 
-    &:last-child {
+    &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+
+  .quoteBlock {
+    background-color: $color-pink-100;
+    padding: 0rem 2rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+
+    p {
+      color: $color-neutral-800;
+      margin: 0;
+      font-size: 1rem;
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+
+    &::before {
+      content: "\201C";
+      display: block;
+      color: $color-pink-400;
+      font-size: 4rem;
+      font-family: Georgia, serif;
+      height: 2rem;
+      line-height: 0.5;
+      margin-bottom: 0.5rem;
+    }
+
+    &::after {
+      content: "\201D";
+      display: block;
+      color: $color-pink-400;
+      font-size: 4rem;
+      font-family: Georgia, serif;
+      height: 2rem;
+      line-height: 1.5;
+      text-align: right;
+      margin-top: 0.5rem;
     }
   }
 }

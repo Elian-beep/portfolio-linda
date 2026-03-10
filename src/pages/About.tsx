@@ -29,6 +29,15 @@ export const About = () => {
               ajudam diferentes perfis de usuários, dos mais experientes até
               quem está dando os primeiros cliques.
             </p>
+            <div className={styles.quoteBlock}>
+              <p>
+                Acredito que o design é uma ponte entre pessoas e tecnologia.
+                Meu objetivo é criar soluções digitais que facilitem o dia a dia
+                de todos — incluindo idosos ou pessoas com pouca familiaridade
+                com tecnologia. Quero que cada interação seja inclusiva,
+                intuitiva e marcante.
+              </p>
+            </div>
           </div>
         </div>
       </div>
