@@ -1,6 +1,6 @@
 import { SectionTitle } from "@/components/SectionTitle";
 import styles from "./About.module.scss";
-import LindaImage from '@/assets/linda-logo-02.png';
+import LindaImage from "@/assets/linda-logo-02.png";
 
 export const About = () => {
   return (
@@ -14,8 +14,21 @@ export const About = () => {
           </div>
           <div className={styles.textPlaceholder}>
             <h3>Linda Souza</h3>
-            <p>Product Designer</p>
-            <p>Desde pequena, sou fascinada por...</p>
+            <span className={styles.role}>Product Designer</span>
+            <p>
+              Desde pequena, sou fascinada por criar e transformar. Comecei
+              editando fotos na loja da minha família em Manaus e logo percebi
+              que queria unir criatividade com tecnologia para impactar pessoas
+              de verdade. Migrei da Ciência da Computação para o Product Design
+              justamente para tornar o digital mais humano e acessível.
+            </p>
+            <p>
+              Sou curiosa, colaborativa, adoro aprender coisas novas e acredito
+              que boas ideias surgem quando ouvimos diferentes pontos de vista.
+              Amo desenhar soluções que facilitem o dia a dia das pessoas e
+              ajudam diferentes perfis de usuários, dos mais experientes até
+              quem está dando os primeiros cliques.
+            </p>
           </div>
         </div>
       </div>
